@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,400&display=swap');
+:root{
+    --primaryColor:#000;
+    --secondColor:#fff;
+}
+/*Typography*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Roboto", Arial, sans-serif;
+    font-size: 1.4rem;
+    width: 100%;
+    height: 100vh;
+    background: url("/images/wp2599594.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex; */
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.padd {
+    margin:0 2%;
+}
+/*Nav Bar*/
+#navbar{
+    width: 100%;
+    height: 50px;
+}
+#navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 50px;
+}
+#navbar ul li{
+    margin-left: 1.2rem;
+}
+#navbar ul li a{
+    color: var(--primaryColor);
+}
+.img-menu-container{
+    display: block;
+    position: relative;
+    width: 30px;     
+    height: 30px;
+    overflow: hidden;
+}
+.img-menu{
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    
+}
+
+.img-menu:hover{
+    background-color: red;
+}
+.img-container{
+    display: block;
+    position: relative;
+    width: 35px;     
+    height: 35px;
+    border-radius:50%;
+    overflow: hidden;
+    background-color: red;
+}
+img.profile-img{
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+
+}
+
+#main{
+    width: 100%;
+}
+.shortcuts{
+    display: none;
+}
+
+#footer{
+  
+}
