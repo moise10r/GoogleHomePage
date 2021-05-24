@@ -7,6 +7,8 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    color:red;
+
 }
 body{
     margin: 0;
@@ -113,7 +115,7 @@ img.profile-img{
 form{
     border: 1px solid var(--secondColor);
     height: 44px;
-    width: 561px;
+    width: 43%;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -122,13 +124,13 @@ form{
     background-color: var(--secondColor);
 }
 form .img-form-one{
-    padding-left: 1.6rem;
+    padding-left: 1.6%;
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
 form .img-form-two{
-    padding-right: 1.6rem;
+    padding-right: 1.6%;
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -143,13 +145,16 @@ form input{
 form input::placeholder{
     color: gray;
 }
+form input.hide::placeholder{
+    color: transparent;
+}
 
 .shortcuts{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 45%;
     /* margin-right: -30px;
     margin-top: 60px; */
 }
