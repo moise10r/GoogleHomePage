@@ -19,10 +19,12 @@ body{
     height: 100vh;
     overflow: hidden;
     display: grid;
-    background: url('/images/wp2599594.jpg');
+
+    background: url("/images/woodland-road-falling-leaf-natural-38537.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: grid;
     grid-template-areas: 
     'header'
     'main'
@@ -138,6 +140,20 @@ form .img-form-two{
     cursor: pointer;
 
 }
+
+form .img-form-one{
+    padding-left: 1.6rem;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+form .img-form-two{
+    padding-right: 1.6rem;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+}
 form input{
     flex: 1;
     height: 100%;
@@ -157,8 +173,6 @@ form input.hide::placeholder{
     align-items: center;
     justify-content: center;
     width: 45%;
-    /* margin-right: -30px;
-    margin-top: 60px; */
 }
 .single-shortcut{
     display: flex;
