@@ -7,6 +7,8 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    color:red;
+
 }
 body{
     margin: 0;
@@ -15,11 +17,18 @@ body{
     font-size: 1.4rem;
     width: 100%;
     height: 100vh;
-    background: url("/images/wp2599594.jpg");
+    overflow: hidden;
+    background: url("/images/planks-dark-old-wood-texture-background-170515350.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* display: flex; */
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 60px;
 
 }
 a{
@@ -28,25 +37,32 @@ a{
 li{
     list-style: none;
 }
+input{
+    border: none;
+    outline: none;
+}
+p{
+    color: var(--secondColor);
+    font-weight: 400;
+}
 .padd {
     margin:0 2%;
 }
 /*Nav Bar*/
-#navbar{
-    width: 100%;
-    height: 50px;
+header{
+    grid-area: header;
 }
-#navbar ul{
+header ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     line-height: 50px;
 }
-#navbar ul li{
+header ul li{
     margin-left: 1.2rem;
 }
-#navbar ul li a{
-    color: var(--primaryColor);
+header ul li a{
+    color: var(--secondColor);
 }
 .img-menu-container{
     display: block;
@@ -65,7 +81,8 @@ li{
 }
 
 .img-menu:hover{
-    background-color: red;
+    background-color: var(--secondColor);
+    opacity: 0.3;
 }
 .img-container{
     display: block;
@@ -85,12 +102,116 @@ img.profile-img{
 }
 
 #main{
-    width: 100%;
+    grid-area: main;
 }
-.shortcuts{
-    display: none;
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+form{
+    border: 1px solid var(--secondColor);
+    height: 44px;
+    width: 43%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color: var(--secondColor);
+  box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
+
+}
+form .img-form-one{
+    padding-left: 1.6%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+form .img-form-two{
+    padding-right: 1.6%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+}
+form input{
+    flex: 1;
+    height: 100%;
+    font-size: 16px;
+    padding-left: 20px;
+}
+form input::placeholder{
+    color: gray;
+}
+form input.hide::placeholder{
+    color: transparent;
 }
 
+.shortcuts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    /* margin-right: -30px;
+    margin-top: 60px; */
+}
+.single-shortcut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 90px;
+    margin: 2px;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.single-shortcut:hover{
+    background-color: var(--primaryColor);
+    opacity: 0.7;
+}
+.shortcut-img{
+    width: 44px;     
+    height: 44px;
+    border-radius:50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondColor);   
+}
+.shortcut-img img{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
 #footer{
-  
+    grid-area: footer;
+}
+#footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+}
+#footer ul li:first-child{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#footer ul li:first-child a{
+    margin-right: 9px;
+    color: var(--secondColor);
+
+}
+#footer ul li:nth-child(2) a{
+    color: var(--secondColor);
+    height: 16px;
+    width: 16px;
+
 }
