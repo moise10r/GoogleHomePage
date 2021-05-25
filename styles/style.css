@@ -7,7 +7,6 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
-    color:red;
 
 }
 body{
@@ -15,24 +14,9 @@ body{
     padding: 0;
     font-family: Roboto, "Roboto", Arial, sans-serif;
     font-size: 1.4rem;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: grid;
-
-    background: url("/images/woodland-road-falling-leaf-natural-38537.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-areas: 
-    'header'
-    'main'
-    'footer';
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr 60px;
 
 }
+
 a{
     text-decoration: none;
 }
@@ -43,6 +27,9 @@ input{
     border: none;
     outline: none;
 }
+img{
+    max-width: 100%;
+}
 p{
     color: var(--secondColor);
     font-weight: 400;
@@ -50,18 +37,36 @@ p{
 .padd {
     margin:0 2%;
 }
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    background: url("/images/woodland-road-falling-leaf-natural-38537.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 60px;
+}
 /*Nav Bar*/
-header{
+header {
     grid-area: header;
+
 }
 header ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    line-height: 50px;
+    line-height: 60px;
 }
 header ul li{
-    margin-left: 1.2rem;
+    margin-left: 1.6rem;
 }
 header ul li a{
     color: var(--secondColor);
@@ -93,7 +98,6 @@ header ul li a{
     height: 35px;
     border-radius:50%;
     overflow: hidden;
-    background-color: red;
 }
 img.profile-img{
     position: absolute;
@@ -105,26 +109,29 @@ img.profile-img{
 
 #main{
     grid-area: main;
+    width: 100%;
 }
 .main-container{
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 10rem;
+}
+#google-logo{    
+    padding-top:6.5rem  ;
 }
 form{
-    border: 1px solid var(--secondColor);
     height: 44px;
-    width: 43%;
-    margin-top: 20px;
+    width: 40%;
+    min-width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 40px;
+    border: 1px solid var(--secondColor);
     background-color: var(--secondColor);
-  box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
+    box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
+    margin-top: 2.9rem;
 
 }
 form .img-form-one{
@@ -168,29 +175,33 @@ form input.hide::placeholder{
 }
 
 .shortcuts{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    width: 45%;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(5,1fr); 
+    width: 40%;
+    padding: 0 1.6rem;
 }
 .single-shortcut{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 80%;
     width: 90px;
-    margin: 2px;
+    margin: 2%;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 3rem;
+    
 }
 .single-shortcut:hover{
     background-color: var(--primaryColor);
     opacity: 0.7;
 }
 .shortcut-img{
-    width: 44px;     
-    height: 44px;
+    width: 45%;     
+    height: 45%;
     border-radius:50%;
     overflow: hidden;
     display: flex;
@@ -206,16 +217,21 @@ form input.hide::placeholder{
 }
 #footer{
     grid-area: footer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 #footer ul{
+    bottom: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     height: 100%;
 }
 #footer ul li:first-child{
-    display: flex;
-    justify-content: flex-start;
+    display: flex;  
+    /* justify-content: flex-start; */
     align-items: center;
 }
 #footer ul li:first-child a{
