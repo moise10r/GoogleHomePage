@@ -18,11 +18,11 @@ body{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: url("/images/planks-dark-old-wood-texture-background-170515350.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: grid;
+    background: url('/images/wp2599594.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     grid-template-areas: 
     'header'
     'main'
